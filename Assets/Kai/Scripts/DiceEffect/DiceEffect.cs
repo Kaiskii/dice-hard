@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DiceEffect : MonoBehaviour
+public class DiceEffect : ScriptableObject
 {
     #region Serialized Fields
     [SerializeField] private float rarity;
@@ -15,5 +15,5 @@ public class DiceEffect : MonoBehaviour
 
     protected virtual void Initialize () { }
 
-    protected virtual void PerformAction () { }
+    public virtual void PerformAction () { }
 }

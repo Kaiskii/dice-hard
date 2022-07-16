@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class OnAttackEvent : UnityEvent <int> { };
 
+[CreateAssetMenu(fileName = "Attack", menuName = "DiceEfffects/AttackEffectSO", order = 1)]
 public class AttackEffect : DiceEffect
 {
     #region Serialized Fields
@@ -11,9 +12,10 @@ public class AttackEffect : DiceEffect
     [SerializeField] private int incrementAmount = 1;
     #endregion
 
-    protected override void PerformAction()
+    public override void PerformAction()
     {
         base.PerformAction();
         _onAttackEvent.Invoke(incrementAmount);
+        Debug.Log($"Attack +{incrementAmount}");
     }
 }

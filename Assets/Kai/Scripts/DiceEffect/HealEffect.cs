@@ -4,6 +4,7 @@ using UnityEngine;
 [System.Serializable]
 public class OnHealEvent : UnityEvent <int> { };
 
+[CreateAssetMenu(fileName = "Heal", menuName = "DiceEfffects/HealEffectSO", order = 1)]
 public class HealEffect : DiceEffect
 {
     #region Serialized Fields
@@ -11,9 +12,10 @@ public class HealEffect : DiceEffect
     [SerializeField] private int incrementAmount = 1;
     #endregion
 
-    protected override void PerformAction()
+    public override void PerformAction()
     {
         base.PerformAction();
         _onHealEvent.Invoke(incrementAmount);
+        Debug.Log($"Heal +{incrementAmount}");
     }
 }
