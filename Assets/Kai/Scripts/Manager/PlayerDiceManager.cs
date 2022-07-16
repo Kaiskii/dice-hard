@@ -1,6 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+
+[System.Serializable]
+public class OnAttackEvent : UnityEvent <int> { };
 
 public class PlayerDiceManager : Singleton<PlayerDiceManager>
 {
@@ -8,7 +12,7 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
     public List<PlayerDice> _playerDices;
     #endregion
 
-    private void Update()
+    private void Update ()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -24,4 +28,22 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
         if (diceEffect != null)
             diceEffect.PerformAction();
     }
+
+    #region Example Listening Usage Functions
+    private void Start()
+    {
+        DiceEffectManager.StartListening("OnAttackEvent", OnAttackTestFunction);
+        DiceEffectManager.StartListening("OnHealEvent", OnHealTestFunction);
+    }
+
+    private void OnAttackTestFunction (int amount)
+    {
+        Debug.Log($"Attack Increased by {amount}");
+    }
+
+    private void OnHealTestFunction (int amount)
+    {
+        Debug.Log($"Health Increased by {amount}");
+    }
+    #endregion
 }
