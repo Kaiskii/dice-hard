@@ -32,6 +32,11 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
         }
     }
 
+    /// <summary>
+    /// Add the corresponding dice action retrieved from index to the Queue Stack
+    /// </summary>
+    /// <param name="diceIndex"></param>
+    /// <param name="actionIndex"></param>
     public void AddDiceActionToStack (int diceIndex, int actionIndex)
     {
         DiceEffect diceEffect = _playerDices[diceIndex]?.diceEffects[actionIndex];
@@ -45,12 +50,22 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
 
     }
 
+    /// <summary>
+    /// Performs the Dice Effect
+    /// </summary>
+    /// <param name="diceEffect"></param>
+    /// <param name="diceIndex"></param>
     public void PerformDiceAction (DiceEffect diceEffect, int diceIndex)
     {
         if (diceEffect != null)
             diceEffect.PerformAction();
     }
 
+    /// <summary>
+    /// Retrieves the Dice Effect from the Player Dice List and performs it
+    /// </summary>
+    /// <param name="diceIndex"></param>
+    /// <param name="actionIndex"></param>
     public void PerformDiceAction (int diceIndex, int actionIndex)
     {
         DiceEffect diceEffect = _playerDices[diceIndex]?.diceEffects[actionIndex];
@@ -59,6 +74,10 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
             diceEffect.PerformAction();
     }
 
+    /// <summary>
+    /// Performs all action from the player dice queue
+    /// </summary>
+    /// <param name="diceIndex"></param>
     public void PopAllAction (int diceIndex)
     {
         Queue<DiceEffect> dEQ = _playerDices[diceIndex].diceEffectQueue;
@@ -69,6 +88,11 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
         }
     }
 
+    /// <summary>
+    /// Handles face modifiers on dice
+    /// </summary>
+    /// <param name="fm"></param>
+    /// <param name="diceIndex"></param>
     private void HandleFaceModifier (FaceModifier fm, int diceIndex)
     {
         switch (fm)
@@ -81,6 +105,9 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
         }
     }
 
+    /// <summary>
+    /// Example of how to setup listeners
+    /// </summary>
     #region Example Listening Usage Functions
     private void Start()
     {
