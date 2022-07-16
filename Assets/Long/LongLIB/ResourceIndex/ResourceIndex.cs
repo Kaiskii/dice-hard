@@ -20,7 +20,7 @@ public class ResourceIndex : ScriptableObject
 
             etc... any types you want to index
             */
-
+            {"HealthBars",typeof(StatusBarSO)},
             {"Projectiles",typeof(ProjectileDataSO)}
         };
 
