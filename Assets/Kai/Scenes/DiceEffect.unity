@@ -238,6 +238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerDices:
   - {fileID: 11400000, guid: d662aa91bcae2cf488810aa6f5811b9f, type: 2}
+  - {fileID: 11400000, guid: d662aa91bcae2cf488810aa6f5811b9f, type: 2}
 --- !u!4 &1241407442
 Transform:
   m_ObjectHideFlags: 0
