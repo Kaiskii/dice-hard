@@ -6,4 +6,10 @@ using UnityEngine;
 public class PlayerDice : ScriptableObject
 {
     public List<DiceEffect> diceEffects = new List<DiceEffect>();
+    public Queue<DiceEffect> diceEffectQueue = new Queue<DiceEffect>();
+
+    public void Reset()
+    {
+        this.diceEffectQueue.Clear();
+    }
 }
