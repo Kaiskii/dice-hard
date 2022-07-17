@@ -1,3 +1,4 @@
+using UnityEngine.Events;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Heal", menuName = "DiceEfffects/HealEffectSO", order = 1)]

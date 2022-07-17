@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Attack
   m_EditorClassIdentifier: 
   rarity: 0
-  faceModifier: 0
+  _onAttackEvent:
+    m_PersistentCalls:
+      m_Calls: []
   incrementAmount: 1

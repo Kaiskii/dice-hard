@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1bbba125231a18428ba3fb116a50bf1, type: 3}
   m_Name: StartingDIce
   m_EditorClassIdentifier: 
-  multiplier: 1
   diceEffects:
   - {fileID: 11400000, guid: b4708bb2aa8393b44be2581e9d0474e8, type: 2}
-  - {fileID: 11400000, guid: f7edfb5c6d0a6734aa9534478dfce924, type: 2}
+  - {fileID: 0}
   - {fileID: 11400000, guid: bf83379d83662294b8cee51c816c688b, type: 2}
-  - {fileID: 11400000, guid: f7edfb5c6d0a6734aa9534478dfce924, type: 2}
-  - {fileID: 11400000, guid: f7edfb5c6d0a6734aa9534478dfce924, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 11400000, guid: b4708bb2aa8393b44be2581e9d0474e8, type: 2}
