@@ -11,7 +11,7 @@ public enum FaceModifier {
 public class DiceEffect : ScriptableObject
 {
     #region Serialized Fields
-    [SerializeField] private float rarity;
+    [SerializeField] protected float rarity;
     #endregion
 
     #region Public Fields

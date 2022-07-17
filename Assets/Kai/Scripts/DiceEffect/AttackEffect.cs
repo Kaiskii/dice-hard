@@ -1,4 +1,3 @@
-using UnityEngine.Events;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Attack", menuName = "DiceEfffects/AttackEffectSO", order = 1)]

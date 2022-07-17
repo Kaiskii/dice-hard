@@ -22,6 +22,8 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
             }
             // Finish Rolling
 
+            CheckForComboFace();
+
             // Perform Action
             for (int i = 0; i < _playerDices.Count; i += 1)
             {
@@ -47,6 +49,15 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
             dEQ.Enqueue(diceEffect);
             HandleFaceModifier(diceEffect.faceModifier, diceIndex);
         }
+
+        if (diceEffect.GetType() == typeof(ComboEffect))
+        {
+
+        }
+    }
+
+    private void AddComboStack (int excludeIndex)
+    {
 
     }
 
@@ -109,7 +120,7 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
     /// Example of how to setup listeners
     /// </summary>
     #region Example Listening Usage Functions
-    private void Start()
+    private void Start ()
     {
         DiceEffectManager.StartListening("OnAttackEvent", OnAttackTestFunction);
         DiceEffectManager.StartListening("OnHealEvent", OnHealTestFunction);
