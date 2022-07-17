@@ -1053,6 +1053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerDices:
   - {fileID: 11400000, guid: d662aa91bcae2cf488810aa6f5811b9f, type: 2}
+  - {fileID: 11400000, guid: d662aa91bcae2cf488810aa6f5811b9f, type: 2}
 --- !u!4 &1241407442
 Transform:
   m_ObjectHideFlags: 0
@@ -1525,7 +1526,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   diceEffectLibrary:
   - {fileID: 11400000, guid: b4708bb2aa8393b44be2581e9d0474e8, type: 2}
+  - {fileID: 11400000, guid: bf46550739000d44a83d5dfe48517425, type: 2}
+  - {fileID: 11400000, guid: 96fd9e9bcedb1634ba1b04ee8afba8ab, type: 2}
   - {fileID: 11400000, guid: bf83379d83662294b8cee51c816c688b, type: 2}
+  - {fileID: 11400000, guid: 344f9fc06ea190545af2448160cda119, type: 2}
+  - {fileID: 11400000, guid: 4f440e32507fefa448b3b86df815fb9b, type: 2}
+  - {fileID: 11400000, guid: f7edfb5c6d0a6734aa9534478dfce924, type: 2}
 --- !u!4 &2138397771
 Transform:
   m_ObjectHideFlags: 0

@@ -9,9 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ded05843c738dad4fba172e792a60253, type: 3}
-  m_Name: Attack
+  m_Script: {fileID: 11500000, guid: 939a6b2bfeafa2146ac73be6a6a59e42, type: 3}
+  m_Name: DoubleDamage
   m_EditorClassIdentifier: 
   rarity: 0
   faceModifier: 0
-  incrementAmount: 1
