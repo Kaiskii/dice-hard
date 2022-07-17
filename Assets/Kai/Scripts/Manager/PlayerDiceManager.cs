@@ -30,6 +30,7 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
     }
 
     #region Example Listening Usage Functions
+    /*
     private void Start()
     {
         DiceEffectManager.StartListening("OnAttackEvent", OnAttackTestFunction);
@@ -45,5 +46,6 @@ public class PlayerDiceManager : Singleton<PlayerDiceManager>
     {
         Debug.Log($"Health Increased by {amount}");
     }
+    */
     #endregion
 }

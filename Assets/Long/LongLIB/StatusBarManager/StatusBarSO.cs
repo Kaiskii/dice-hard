@@ -32,11 +32,17 @@ public class StatusBarSO : ScriptableObject
     }
 
     public void SetBarCurrentValue(float val){
-        if(currValue+val>maxValue){
-            currValue = maxValue;
-        } else {
-            currValue = currValue+val;
-        }
+        currValue = val;
+    }
+
+    public void AddBarValue(float val){
+        currValue += val;
+        if(currValue > maxValue) currValue = maxValue;
+        if(currValue < 0) currValue = 0;
+    }
+
+    public void AddBarMaxValue(float val){
+        maxValue += val;
     }
 }
 
